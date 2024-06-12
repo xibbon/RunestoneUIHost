@@ -11,6 +11,11 @@
 		4933C7B42BB5F60800722563 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933C7B32BB5F60800722563 /* ContentView.swift */; };
 		4933C7B62BB5F60900722563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4933C7B52BB5F60900722563 /* Assets.xcassets */; };
 		4933C7B92BB5F60900722563 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4933C7B82BB5F60900722563 /* Preview Assets.xcassets */; };
+		4933C7C52BB607DC00722563 /* TreeSitterGDScript in Frameworks */ = {isa = PBXBuildFile; productRef = 4933C7C42BB607DC00722563 /* TreeSitterGDScript */; };
+		4933C7C72BB607DC00722563 /* TreeSitterGDScriptQueries in Frameworks */ = {isa = PBXBuildFile; productRef = 4933C7C62BB607DC00722563 /* TreeSitterGDScriptQueries */; };
+		4933C7C92BB607DC00722563 /* TreeSitterGDScriptRunestone in Frameworks */ = {isa = PBXBuildFile; productRef = 4933C7C82BB607DC00722563 /* TreeSitterGDScriptRunestone */; };
+		4935980B2C1A171100F59B20 /* Runestone in Frameworks */ = {isa = PBXBuildFile; productRef = 4935980A2C1A171100F59B20 /* Runestone */; };
+		493598112C1A187A00F59B20 /* RunestoneUI in Frameworks */ = {isa = PBXBuildFile; productRef = 493598102C1A187A00F59B20 /* RunestoneUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4935980B2C1A171100F59B20 /* Runestone in Frameworks */,
+				4933C7C92BB607DC00722563 /* TreeSitterGDScriptRunestone in Frameworks */,
+				4933C7C52BB607DC00722563 /* TreeSitterGDScript in Frameworks */,
+				493598112C1A187A00F59B20 /* RunestoneUI in Frameworks */,
+				4933C7C72BB607DC00722563 /* TreeSitterGDScriptQueries in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +93,13 @@
 			dependencies = (
 			);
 			name = RunestoneUIHost;
+			packageProductDependencies = (
+				4933C7C42BB607DC00722563 /* TreeSitterGDScript */,
+				4933C7C62BB607DC00722563 /* TreeSitterGDScriptQueries */,
+				4933C7C82BB607DC00722563 /* TreeSitterGDScriptRunestone */,
+				4935980A2C1A171100F59B20 /* Runestone */,
+				493598102C1A187A00F59B20 /* RunestoneUI */,
+			);
 			productName = RunestoneUIHost;
 			productReference = 4933C7AE2BB5F60800722563 /* RunestoneUIHost.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,10 @@
 				Base,
 			);
 			mainGroup = 4933C7A52BB5F60800722563;
+			packageReferences = (
+				4933C7C32BB607DC00722563 /* XCRemoteSwiftPackageReference "treesitterlanguages" */,
+				4935980F2C1A187A00F59B20 /* XCRemoteSwiftPackageReference "runestoneui" */,
+			);
 			productRefGroup = 4933C7AF2BB5F60800722563 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -280,6 +301,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +331,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +367,52 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4933C7C32BB607DC00722563 /* XCRemoteSwiftPackageReference "treesitterlanguages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xibbon/treesitterlanguages";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		4935980F2C1A187A00F59B20 /* XCRemoteSwiftPackageReference "runestoneui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xibbon/runestoneui";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4933C7C42BB607DC00722563 /* TreeSitterGDScript */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4933C7C32BB607DC00722563 /* XCRemoteSwiftPackageReference "treesitterlanguages" */;
+			productName = TreeSitterGDScript;
+		};
+		4933C7C62BB607DC00722563 /* TreeSitterGDScriptQueries */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4933C7C32BB607DC00722563 /* XCRemoteSwiftPackageReference "treesitterlanguages" */;
+			productName = TreeSitterGDScriptQueries;
+		};
+		4933C7C82BB607DC00722563 /* TreeSitterGDScriptRunestone */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4933C7C32BB607DC00722563 /* XCRemoteSwiftPackageReference "treesitterlanguages" */;
+			productName = TreeSitterGDScriptRunestone;
+		};
+		4935980A2C1A171100F59B20 /* Runestone */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Runestone;
+		};
+		493598102C1A187A00F59B20 /* RunestoneUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4935980F2C1A187A00F59B20 /* XCRemoteSwiftPackageReference "runestoneui" */;
+			productName = RunestoneUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4933C7A62BB5F60800722563 /* Project object */;
 }
